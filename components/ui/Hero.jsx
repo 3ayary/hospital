@@ -6,8 +6,8 @@ const Hero = () => {
       <Image
         src="/heroImage.jpg"
         alt="Hero background"
-        width={928}
-        height={480}
+        width={1028}
+        height={580}
         className=" rounded-2xl"
       />
 
@@ -35,7 +35,7 @@ const Hero = () => {
 
           <input
             type="text"
-            placeholder="Search  for doctors by name or specialty"
+            placeholder="Search for doctors by name or specialty"
             className="p-2 rounded-md w-85 focus:outline-none"
           />
           
