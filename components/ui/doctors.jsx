@@ -40,11 +40,13 @@ const DoctorSection = () => {
           </div>
         ))}
       </div>
-      <Link href={'/doctors'}>
+     
          <h1 className="text-5xl font-extrabold my-10 text-center hover:text-blue-950">
+ <Link href={'/doctors'}>
         Explore More Doctors
+         </Link>
       </h1>
-      </Link>
+     
     
     </section>
   );

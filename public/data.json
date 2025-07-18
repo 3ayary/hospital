@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "name": "Dr.Amelia Harper",
+    "image": "/DrAmelia Harper.jpg",
+    "Specialty": "Cardiologist",
+    "about": "Dr. Amelia Harper is a renowned cardiologist with over 15 years of experience in treating heart conditions. She is known for her compassionate care and advanced treatment techniques.",
+    "education": "MD from Harvard Medical School",
+    "Fellowship": "Cardiology at Johns Hopkins University",
+    "reviews": [
+      {
+        "user": "John Doe",
+        "rating": 5,
+        "comment": "Dr. Harper saved my life! Highly recommend her.",
+        "since": "2023-01-15"
+      },
+      {
+        "user": "Jane Smith",
+        "rating": 4,
+        "comment": "Very knowledgeable and caring doctor.",
+        "since": "2023-02-20"
+      }
+    ]
+  },
+    {
+        "id": 2,
+        "name": "Dr.Benjamin Lee",
+        "image": "/DrBenjamin Lee.jpg",
+        "Specialty": "Neurologist",
+        "about": "Dr. Benjamin Lee is a leading neurologist specializing in neurodegenerative diseases. He has published numerous papers and is a sought-after speaker at medical conferences.",
+        "education": "MD from Stanford University, PhD in Neuroscience from MIT",
+        "Fellowship": "Neuroscience at MIT",
+        "reviews": [
+        {
+            "user": "Alice Johnson",
+            "rating": 5,
+            "comment": "Exceptional care and expertise in neurology.",
+            "since": "2023-03-10"
+        },
+        {
+            "user": "Bob Brown",
+            "rating": 4,
+            "comment": "Very thorough and attentive.",
+            "since": "2023-04-05"
+        }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Dr.Clara Patel",
+        "image": "/DrClara Patel.jpg",
+        "Specialty": "Oncologist",
+        "about": "Dr. Clara Patel is a highly respected oncologist with a focus on breast cancer research. She is dedicated to providing personalized treatment plans for her patients.",
+        "education": "MD from Johns Hopkins University, Fellowship in Oncology at Mayo Clinic",
+        "Fellowship": "Oncology at Mayo Clinic",
+        "reviews": [
+            {
+                "user": "Michael Green",
+                "rating": 5,
+                "comment": "Dr. Patel is incredibly supportive and knowledgeable.",
+                "since": "2023-05-12"
+            },
+            {
+                "user": "Sarah White",
+                "rating": 4,
+                "comment": "Great doctor, very caring.",
+                "since": "2023-06-18"
+            }
+        ]
+    }
+]

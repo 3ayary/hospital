@@ -1,8 +1,8 @@
-import { Hero , Departments ,DoctorSection, BookSection } from "@/components";
+import { Hero , Departments ,DoctorSection } from "@/components";
 
 export default function Home() {
   return (
-   <main className="flex min-h-screen flex-col items-center ">
+   <main className="flex min-h-screen flex-col  items-center ">
     
     <Hero />
     <Departments/>  
