@@ -3,16 +3,14 @@ import data from "@/public/data.json";
 import React from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
-
-
+import ReviewSummary from "@/components/ui/chart";
+import ReviewCard from "@/components/reviewCard";
 
 const DoctorDetailPage = () => {
   const params = useParams();
   const { doctorId } = params;
-  console.log(data);
-  console.log(doctorId);
+
   const doctor = data?.find((doc) => doc?.id === parseInt(doctorId));
-  console.log(doctor);
 
   return (
     <div className="mx-25 mt-12">
@@ -50,7 +48,16 @@ const DoctorDetailPage = () => {
         </div>
       </div>
       <h1 className="text-2xl font-bold mb-3 ">Reviews</h1>
-   
+      <ReviewSummary reviews={doctor.reviews} />
+
+      <div>
+        {doctor.reviews.map((review, index) => (
+          <ReviewCard key={index} reviews={[review]} />
+        ))}
+      </div>
+
+      <button className="border-gray-300 bg-[#E5EDF5] p-3 rounded-2xl">See all reviews</button>
+      
     </div>
   );
 };
