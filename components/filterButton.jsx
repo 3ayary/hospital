@@ -1,13 +1,14 @@
-const FilterButton = ({ options, onChange }) => {
+const FilterButton = ({ options, onChange, main }) => {
   return (
     <div>
       <div className="relative inline-block">
         <select
+        value={main}
           onChange={(e) => onChange(e.target.value)}
           className="appearance-none border border-gray-300 bg-[#E5EDF5] text-black rounded-md p-2 pr-10 w-full focus:outline-none"
         >
           {options.map((option, index) => (
-            <option key={index}>{option}</option>
+            <option key={index} >{option}</option>
           ))}
         </select>
         <div className="pointer-events-none absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">

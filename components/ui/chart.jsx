@@ -18,7 +18,7 @@ export default function ReviewSummary({ reviews }) {
     ? (totalStars / totalReviews).toFixed(1) 
     : "0.0";
 
-  // توزيع التقييمات: كم واحد إدّى 5، 4، إلخ
+
   const reviewData = [5, 4, 3, 2, 1].map((star) => {
     const count = reviews.filter((r) => r.stars === star).length;
     const percent = totalReviews ? (count / totalReviews) * 100 : 0;

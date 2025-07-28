@@ -1,26 +1,31 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Departments = () => {
   const departments = [
     {
       name: "Cardiology",
       image: "/Cardiology.jpg",
+      link: "/doctors?specialty=Cardiologist",
     },
     {
       name: "Neurology",
       image: "/Neurology.jpg",
+      link: "/doctors?specialty=Neurologist",
     },
     {
       name: "Pediatrics",
       image: "/Pediatrics.jpg",
+      link: "/doctors?specialty=Pediatrician",
     },
     {
       name: "Oncology",
       image: "/Oncology.jpg",
+      link: "/doctors?specialty=Oncologist",
     },
     {
       name: "Orthopedics",
       image: "/Orthopedics.jpg",
+      link: "/doctors?specialty=Orthopedist",
     },
   ];
 
@@ -30,7 +35,7 @@ const Departments = () => {
 
       <div className="flex flex-row gap-13 flex-wrap justify-center ">
         {departments?.map((img) => (
-          <div>
+          <Link href={img.link}>
             <Image
               src={img?.image}
               width={160}
@@ -38,7 +43,7 @@ const Departments = () => {
               className="rounded-xl"
             />
             <h1 className="my-2 mx-1">{img?.name}</h1>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -1,24 +1,31 @@
-'use client'
+"use client";
 
-import { useSearchParams } from 'next/navigation'
-import DoctorCard from '@/components/doctorCard'
-import FilterButton from '@/components/filterButton'
-import data from '@/public/data.json'
-import { useState, useEffect } from 'react'
+import { useSearchParams } from "next/navigation";
+import DoctorCard from "@/components/doctorCard";
+import FilterButton from "@/components/filterButton";
+import data from "@/public/data.json";
+import { useState } from "react";
 
 const Page = () => {
-  const searchParams = useSearchParams()
-  const initialQuery = searchParams.get('query') || ''
+ const searchParams = useSearchParams();
+const doctorNameQuery = searchParams.get("name") || "";
+const specialtyQuery = searchParams.get("specialty") || "All";
 
-  const [searchTerm, setSearchTerm] = useState(initialQuery)
-  const [selectedSpecialty, setSelectedSpecialty] = useState('All')
+const [searchTerm, setSearchTerm] = useState(doctorNameQuery);
+const [selectedSpecialty, setSelectedSpecialty] = useState(specialtyQuery);
 
-  const filtered = data.filter((item) => {
-    const matchesName = item.name.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesSpecialty =
-      selectedSpecialty === 'All' || item.Specialty === selectedSpecialty
-    return matchesName && matchesSpecialty
-  })
+const filtered = data.filter((item) => {
+  const matchesName = item.name
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase());
+
+  const matchesSpecialty =
+    selectedSpecialty.toLowerCase() === "all" ||
+    item.Specialty.toLowerCase() === selectedSpecialty.toLowerCase();
+
+  return matchesName && matchesSpecialty;
+});
+
 
   return (
     <div className="min-h-screen px-[150]">
@@ -59,13 +66,14 @@ const Page = () => {
       <div className="flex flex-row gap-5">
         <FilterButton
           options={[
-            'All',
-            'Cardiologist',
-            'Neurologist',
-            'Oncologist',
-            'Pediatrician',
+            "All",
+            "Cardiologist",
+            "Neurologist",
+            "Oncologist",
+            "Pediatrician",
           ]}
           onChange={setSelectedSpecialty}
+          main={selectedSpecialty}
         />
       </div>
 
@@ -82,7 +90,7 @@ const Page = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

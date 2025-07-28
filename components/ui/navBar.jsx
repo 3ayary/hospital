@@ -1,34 +1,49 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '..';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "..";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const NavBar = () => {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
   const router = useRouter();
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      if (searchValue.trim() !== '') {
+    if (e.key === "Enter") {
+      if (searchValue.trim() !== "") {
         router.push(`/doctors?query=${encodeURIComponent(searchValue)}`);
       }
     }
   };
 
   return (
-    <nav className='border-b-1 items-center bg-white border-gray-300 h-15 w-full mb-7 flex px-8 sticky top-0 z-10 '>
-      <Image src={"/logo.svg"} width={131} height={23} className='items-center' alt='Logo' />
-      
-      <div className='flex mx-12 gap-10 items-center text-md'>
-        <Link href='/'><button className='cursor-pointer'>Home</button></Link>
-        <Link href='/doctors'><button className='cursor-pointer'>Doctors</button></Link>
-        <Link href='https://3ayary.vercel.app' target='_balnk'><button className='cursor-pointer'>Contact</button></Link>
+    <nav className="border-b-1 items-center bg-white border-gray-300 h-15 w-full mb-7 flex px-8 sticky top-0 z-10 ">
+      <Image
+        src={"/logo.svg"}
+        width={131}
+        height={23}
+        className="items-center"
+        alt="Logo"
+      />
+
+      <div className="flex mx-12 gap-10 items-center text-md">
+        <Link href="/">
+          <button className="cursor-pointer">Home</button>
+        </Link>
+        <Link href="/Services">
+          <button className="cursor-pointer">Services</button>
+        </Link>
+        <Link href="/doctors">
+          <button className="cursor-pointer">Doctors</button>
+        </Link>
+        <Link href="https://3ayary.vercel.app" target="_balnk">
+          <button className="cursor-pointer">Contact</button>
+        </Link>
       </div>
 
-      <div className='flex flex-row h-fit gap-7 ml-auto'>
+      <div className="flex flex-row h-fit gap-7 ml-auto">
         <div className="border-1 border-gray-300 bg-[#E5EDF5] text-black rounded-xl">
           <div className="flex items-center gap-2">
             <svg
@@ -56,11 +71,11 @@ const NavBar = () => {
             />
           </div>
         </div>
-<Link href={'/doctors'}>
-   <button className='bg-blue-400 p-2 rounded-xl px-3 hover:bg-blue-300 font-semibold text-sm'>Find Doctor</button>
-</Link>
-     
-        <Image src={'/profile.jpg'} width={40} height={40} className='rounded-full' alt='Profile' />
+        <Link href={"/doctors"}>
+          <button className="bg-gradient-to-r from-blue-300 to-blue-500 text-white p-2 rounded-xl px-3 hover:opacity-90 font-semibold text-sm">
+            Find Doctor
+          </button>
+        </Link>
       </div>
     </nav>
   );
