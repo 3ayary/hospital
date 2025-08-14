@@ -25,9 +25,11 @@ const DoctorCard = (doctorData) => {
         </p>
         <p className="text-gray-500 flex flex-row">{doctor?.Specialty}</p>
       </div>
+      <Link href={`/doctors/${doctor.id}`}>
       <button className="border-gray-300 bg-[#E5EDF5] text-black rounded-md self-center w-[115px] h-[32px] text-sm cursor-pointer hover:bg-[#c8d7e6] ">
-        <Link href={`/doctors/${doctor.id}`}>View Profile</Link>
+        View Profile
       </button>
+      </Link>
     </div>
   );
 };

@@ -1,81 +1,82 @@
-import Link from "next/link";
-import React from "react";
+"use client";
 
-const Footer = () => {
-  const GithubLogo = (
-    <svg
-      width="21"
-      height="21"
-      viewBox="0 0 21 21"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M19.5291 5.095C19.9925 3.59994 19.8096 1.97919 19.0247 0.625C18.8907 0.392897 18.643 0.24994 18.375 0.25C16.6036 0.246292 14.9349 1.08067 13.875 2.5H11.625C10.5651 1.08067 8.89638 0.246292 7.125 0.25C6.85699 0.24994 6.60932 0.392897 6.47531 0.625C5.69035 1.97919 5.50747 3.59994 5.97094 5.095C5.50756 5.9038 5.25934 6.81791 5.25 7.75V8.5C5.25326 11.1241 7.19154 13.3436 9.79125 13.7003C9.27807 14.357 8.99952 15.1666 9 16V16.75H6.75C5.50736 16.75 4.5 15.7426 4.5 14.5C4.5 12.4289 2.82107 10.75 0.75 10.75C0.335786 10.75 0 11.0858 0 11.5C0 11.9142 0.335786 12.25 0.75 12.25C1.99264 12.25 3 13.2574 3 14.5C3 16.5711 4.67893 18.25 6.75 18.25H9V19.75C9 20.1642 9.33579 20.5 9.75 20.5C10.1642 20.5 10.5 20.1642 10.5 19.75V16C10.5 14.7574 11.5074 13.75 12.75 13.75C13.9926 13.75 15 14.7574 15 16V19.75C15 20.1642 15.3358 20.5 15.75 20.5C16.1642 20.5 16.5 20.1642 16.5 19.75V16C16.5005 15.1666 16.2219 14.357 15.7087 13.7003C18.3085 13.3436 20.2467 11.1241 20.25 8.5V7.75C20.2407 6.81791 19.9924 5.9038 19.5291 5.095ZM18.75 8.5C18.75 10.5711 17.0711 12.25 15 12.25H10.5C8.42893 12.25 6.75 10.5711 6.75 8.5V7.75C6.7592 7.00002 6.98373 6.26849 7.39687 5.6425C7.55345 5.43612 7.59244 5.16356 7.5 4.92156C7.10545 3.90402 7.1321 2.7713 7.57406 1.77344C8.8174 1.90719 9.9324 2.59924 10.6041 3.65406C10.7414 3.86876 10.9783 3.99905 11.2331 4H14.2659C14.5218 4.00001 14.76 3.8696 14.8978 3.65406C15.5694 2.59913 16.6844 1.90706 17.9278 1.77344C18.3692 2.77155 18.3951 3.90427 18 4.92156C17.9079 5.16109 17.9432 5.43094 18.0938 5.63875C18.511 6.26474 18.7388 6.99778 18.75 7.75V8.5Z"
-        fill="#6B7582"
-      />
-    </svg>
-  );
-
-  const LinkedInLogo = (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M18.25 0.25H1.75C0.921573 0.25 0.25 0.921573 0.25 1.75V18.25C0.25 19.0784 0.921573 19.75 1.75 19.75H18.25C19.0784 19.75 19.75 19.0784 19.75 18.25V1.75C19.75 0.921573 19.0784 0.25 18.25 0.25ZM18.25 18.25H1.75V1.75H18.25V18.25ZM7 8.5V14.5C7 14.9142 6.66421 15.25 6.25 15.25C5.83579 15.25 5.5 14.9142 5.5 14.5V8.5C5.5 8.08579 5.83579 7.75 6.25 7.75C6.66421 7.75 7 8.08579 7 8.5ZM15.25 11.125V14.5C15.25 14.9142 14.9142 15.25 14.5 15.25C14.0858 15.25 13.75 14.9142 13.75 14.5V11.125C13.75 10.0895 12.9105 9.25 11.875 9.25C10.8395 9.25 10 10.0895 10 11.125V14.5C10 14.9142 9.66421 15.25 9.25 15.25C8.83579 15.25 8.5 14.9142 8.5 14.5V8.5C8.50193 8.11975 8.78811 7.80112 9.16598 7.75852C9.54384 7.71592 9.89378 7.96285 9.98031 8.33313C11.0142 7.63174 12.351 7.55891 13.455 8.14381C14.559 8.7287 15.2496 9.87563 15.25 11.125ZM7.375 5.875C7.375 6.49632 6.87132 7 6.25 7C5.62868 7 5.125 6.49632 5.125 5.875C5.125 5.25368 5.62868 4.75 6.25 4.75C6.87132 4.75 7.375 5.25368 7.375 5.875Z"
-        fill="#6B7582"
-      />
-    </svg>
-  );
-
-  const WebSiteLogo = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="#6B7582"
-      className="size-6"
-    
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
-      />
-    </svg>
-  );
-
+export default function Footer() {
   return (
-    <footer>
-      <div className="flex items-center justify-center gap-5">
-        <Link
-          href={"https://www.linkedin.com/in/muhanad-al-ayari-5a1812221/"}
-          target="_blank"
-        >
-          {LinkedInLogo}
-        </Link>
-        <Link href={"https://github.com/3ayary"} target="_blank">
-          {GithubLogo}
-        </Link>
-        <Link href={"https://3ayary.vercel.app"} target="_blank">
-          {WebSiteLogo}
-        </Link>
-      </div>
+    <footer className=" border-1 bg-[#f5f7ff] border-gray-400 shadow-2xl text-[#1a1a1a] py-10 mt-10 px-6 md:px-20">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Logo & About */}
+        <div>
+          <h1 className="text-2xl text-gray-700 border-b-2 border-gray-500 mb-2">Andalusia</h1>
+          <p className="text-sm">
+            Our goal is the health care and safety of our patients by raising the level of services and using the latest technologies in the world
+          </p>
+         
+        </div>
 
-      <p className="text-md text-gray-500 flex justify-center my-3">
-        © 2025 Muhanad Al-Ayari. All rights reserved.
-      </p>
+        {/* Site Content */}
+        <div>
+          <h2 className="font-bold text-lg mb-2">Site Content</h2>
+          <div className="h-1 w-12 bg-blue-300 mb-4"></div>
+          <ul className="space-y-2 text-sm">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Oncology</li>
+            <li>Doctors</li>
+            <li>Offers</li>
+            <li>Our News</li>
+            <li>Homecare</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+            <li>Blog Map</li>
+          </ul>
+        </div>
+
+        {/* Contacts Info */}
+        <div>
+          <h2 className="font-bold text-lg mb-2">Contacts Info</h2>
+          <div className="h-1 w-12 bg-blue-300 mb-4"></div>
+          <div className="text-sm space-y-4">
+            <p className="flex items-start gap-2">
+         
+              6 Dr Sayed Fahmy, Ezbet Saad, Sidi Gaber, Alexandria Governorate, Egypt
+            </p>
+            <p className="flex items-center gap-2">
+          
+              contactus@andalusiagroup.net
+            </p>
+            <p className="flex items-center gap-2">
+
+              16781
+            </p>
+          </div>
+        </div>
+
+        {/* Subscribe Form */}
+        <div>
+          <h2 className="font-bold text-lg mb-2">Subscribe Now To The Mailing List</h2>
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            className="w-full px-4 py-2 border border-gray-300 rounded mt-2"
+          />
+          <button className="bg-blue-300 text-white px-4 py-2 mt-3 rounded w-full hover:bg-[#a17c46]">
+            Subscribe
+          </button>
+
+          {/* Map Embed */}
+          <div className="mt-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d681.7682390299112!2d30.999447960651832!3d30.811259602953356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1753742704196!5m2!1sar!2seg"
+              width="100%"
+              height="200"
+              className="rounded"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </footer>
   );
-};
-
-export default Footer;
+}

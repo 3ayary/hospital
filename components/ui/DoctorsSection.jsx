@@ -5,8 +5,10 @@ const DoctorSection = () => {
   const departments = data;
 
   return (
-    <section className="w-[1060px]">
-      <h1 className="font-semibold text-xl my-7 mx-2">Featured Doctors</h1>
+    <section className="w-[1060px] my-10">
+        <h2 className="text-3xl font-bold mb-6 border-b-2 inline-block text-[#1d2d50]">
+        featured Doctors
+      </h2>
 
       <div className="flex flex-row gap-13 flex-wrap  justify-center ">
         {departments?.map((doctor) => (

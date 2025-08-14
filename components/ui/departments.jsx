@@ -31,7 +31,7 @@ const Departments = () => {
 
   return (
     <section className="w-[1060px]">
-      <h1 className="font-semibold text-xl my-7 mx-2">Departments</h1>
+      <h1 className="font-semibold text-3xl border-b-2 inline-block text-[#1d2d50] my-7 mx-2">Departments</h1>
 
       <div className="flex flex-row gap-13 flex-wrap justify-center ">
         {departments?.map((img) => (

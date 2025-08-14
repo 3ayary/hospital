@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "..";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -40,6 +39,9 @@ const NavBar = () => {
         </Link>
         <Link href="https://3ayary.vercel.app" target="_balnk">
           <button className="cursor-pointer">Contact</button>
+        </Link>
+         <Link href="/about">
+          <button className="cursor-pointer">About Us</button>
         </Link>
       </div>
 
